@@ -34,4 +34,10 @@ class BreweryClientTest {
         URI uri = breweryClient.createNewBeer(beerDto);
         System.out.println(uri);
     }
+
+    @Test
+    void updateBeerInfo() {
+        BeerDto beerDto = BeerDto.builder().beerName("Corona 2020").build();
+        breweryClient.updateBeerInfo(UUID.randomUUID(), beerDto);
+    }
 }
