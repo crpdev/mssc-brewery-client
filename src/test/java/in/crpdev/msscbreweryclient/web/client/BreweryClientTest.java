@@ -40,4 +40,9 @@ class BreweryClientTest {
         BeerDto beerDto = BeerDto.builder().beerName("Corona 2020").build();
         breweryClient.updateBeerInfo(UUID.randomUUID(), beerDto);
     }
+
+    @Test
+    void deleteBeerById() {
+        breweryClient.deleteBeerById(UUID.randomUUID());
+    }
 }
